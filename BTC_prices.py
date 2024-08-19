@@ -111,7 +111,7 @@ def send_email(max_price, max_time):
     try:
         logging.info("sending email...")
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-            server.login(sender_email, "esej lxbv nlyg bljj")
+            server.login(sender_email, "Input app password here")
             server.sendmail(sender_email, receiver_email, msg.as_string())
         logging.info(f"Sent email to {receiver_email} with max price ${max_price:.2f} at {max_time}")
     except smtplib.SMTPException as e:
